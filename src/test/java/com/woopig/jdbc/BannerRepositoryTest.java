@@ -84,6 +84,13 @@ public class BannerRepositoryTest {
         Assert.assertEquals(70000, (long) banner.getHeight());
     }
 
+
+    @Test
+    public void updateSameBanners() {
+        Banner banner = bannerRepository.getOne("004bffc2-1469-4548-8489-95e3af6b7af8");
+        Assert.assertEquals(1, bannerRepository.update(banner));
+    }
+
     @Test(expected = BannerRepositoryException.class)
     public void updateInvalidData() {
         Banner banner = bannerRepository.getOne("004bffc2-1469-4548-8489-95e3af6b7af8");

@@ -34,6 +34,14 @@ public class Audit implements Serializable {
         this.recordDate = recordDate;
     }
 
+    public Audit(String id, String adminId, String bannerId, String operationType, String recordDate) {
+        this.id = id;
+        this.adminId = adminId;
+        this.bannerId = bannerId;
+        this.operationType = operationType;
+        this.recordDate = recordDate;
+    }
+
     public String getId() {
         return id;
     }
